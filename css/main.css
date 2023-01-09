@@ -1,0 +1,11 @@
+.container {
+  max-width: 700px;
+}
+
+.todo-checkbox label {
+  cursor: pointer;
+}
+
+.todo-checkbox input:checked + label {
+  text-decoration: line-through;
+}

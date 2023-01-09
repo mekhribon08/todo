@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-4">TODO</h1>
+
+      <form data-todo-form>
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="my-2">
+              <input
+                required
+                name="title"
+                type="text"
+                placeholder="Task name"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="my-2">
+              <input
+                required
+                name="dueDate"
+                type="datetime-local"
+                placeholder="Task name"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="my-2">
+              <button type="submit" class="btn btn-primary w-100">Add</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="list-group" data-todo-items>
+        <p class="my-5 text-center">Empty</p>
+      </div>
+    </div>
+    <template data-todo-item-template>
+      <div
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div class="form-check todo-checkbox">
+          <input
+            data-is-done
+            data-id
+            class="form-check-input"
+            type="checkbox"
+          />
+          <label data-title class="form-check-label me-2"> </label>
+          <span data-due-date class="badge bg-warning text-dark me-2"></span>
+          <span data-created-at class="badge bg-secondary me-2"></span>
+        </div>
+        <button data-delete data-id type="button" class="btn btn-danger btn-sm">
+          &#10005;
+        </button>
+      </div>
+    </template>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
